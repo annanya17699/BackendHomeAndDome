@@ -1,0 +1,9 @@
+{
+ "env":{
+  "DB_USER":"annanya",
+  "DB_PASSWORD":"homeanddome",
+  "DB_NAME":"home-and-dome",
+  "PORT":5000,
+  "SECRET_KEY":"secret"
+ }
+}
