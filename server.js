@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose = require('mongoose');
 const app = express();
 
 app.use(bodyParser.json());
@@ -13,9 +12,11 @@ app.use((req, res, next)=>{
  next();
 })
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@home-and-dome.0mqzc.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`)
-.then(()=>{
- console.log("connected to db");
- app.listen(process.env.PORT || 5000);
-})
-.catch(err=> console.log(err));
+app.listen(5000)
+
+// mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@home-and-dome.0mqzc.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`)
+// .then(()=>{
+//  console.log("connected to db");
+//  app.listen(process.env.PORT || 5000);
+// })
+// .catch(err=> console.log(err));
